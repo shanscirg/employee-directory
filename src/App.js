@@ -3,12 +3,12 @@ import './App.css';
 import Employee from './components/Employee';
 import Button from './components/Button';
 import Header from './components/Header';
-import employees from './employees.json';
+import employeesList from './employees.json';
 import "./index.css";
 
 class App extends Component {
   state = {
-    employees: employees
+    employees: employeesList
   };
 
   handleInputChange = event => {
@@ -47,9 +47,9 @@ class App extends Component {
       <>
         <Header />
         <div className="buttons-div">
-          <Button onClick={() => this.setState({ employees: this.state.employees.sort(this.sortEmployees) })}>Sort Alphabetically</Button>
           <Button onClick={() => this.setState({ employees: this.filterEmployees() })}>Find All Engineers</Button>
-          <Button onClick={() => this.setState({ employees: employees })}>Reset</Button>
+          <Button onClick={() => this.setState({ employees: this.state.employees.sort(this.sortEmployees) })}>Sort Alphabetically</Button>
+          <Button onClick={() => this.setState({ employees: employeesList })}>Reset</Button>
         </div>
         <Employee employees={this.state.employees} />
       </>
