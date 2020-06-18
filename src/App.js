@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Employee from './components/Employee';
 import Button from './components/Button';
+import Header from './components/Header';
 import employees from './employees.json';
+import "./index.css";
 
 class App extends Component {
   state = {
@@ -43,8 +45,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <Button onClick={() => this.setState({employees: this.state.employees.sort(this.sortEmployees)})}>Sort</Button>
-        <Button onClick={() => this.setState({employees: this.filterEmployees()})}>Find All Engineers</Button>
+        <Header />
+        <Button onClick={() => this.setState({ employees: this.state.employees.sort(this.sortEmployees) })}>Sort Alphabetically</Button>
+        <Button onClick={() => this.setState({ employees: this.filterEmployees() })}>Find All Engineers</Button>
+        <Button onClick={() => this.setState({ employees: employees })}>Reset</Button>
         <Employee employees={this.state.employees} />
       </>
     );

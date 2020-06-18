@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../../employee.png";
+import "./style.css";
 
 class Card extends React.Component {
     render() {
