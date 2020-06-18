@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.buttons-div {
+  /* display: flex; */
+  text-align: center;
+}
+
+.employee {
+  text-align: center;
+}

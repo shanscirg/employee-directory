@@ -46,9 +46,11 @@ class App extends Component {
     return (
       <>
         <Header />
-        <Button onClick={() => this.setState({ employees: this.state.employees.sort(this.sortEmployees) })}>Sort Alphabetically</Button>
-        <Button onClick={() => this.setState({ employees: this.filterEmployees() })}>Find All Engineers</Button>
-        <Button onClick={() => this.setState({ employees: employees })}>Reset</Button>
+        <div className="buttons-div">
+          <Button onClick={() => this.setState({ employees: this.state.employees.sort(this.sortEmployees) })}>Sort Alphabetically</Button>
+          <Button onClick={() => this.setState({ employees: this.filterEmployees() })}>Find All Engineers</Button>
+          <Button onClick={() => this.setState({ employees: employees })}>Reset</Button>
+        </div>
         <Employee employees={this.state.employees} />
       </>
     );

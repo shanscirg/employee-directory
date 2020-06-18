@@ -1,16 +1,17 @@
-.button {
-    /* margin: 5px auto; */
-    border: 1px solid rgb(63, 57, 57);
-    box-shadow: 0 2px 3px #ccc;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+button {
+    border: solid 2px rgb(0, 84, 71);
     margin: 0 auto;
     display: block;
   }
 
+button:hover {
+  cursor: pointer;
+  border: solid 3px rgb(0, 143, 122);
+  box-shadow: 0 2px 3px #ccc;
+}
+
 .button-div {
     align-items: center;
     justify-content: center;
-   
+    margin: 3px;
 }
